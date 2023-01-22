@@ -16,150 +16,153 @@
 
 }
 
-img {
-    max-width: 100%;
-}
-
-
 body {
-    font-size: 14px;
-    font-family: "Montserrat", "sans-serif";
-    background-color: hsl(30, 38%, 92%);
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 0.1px);
-    margin: 0 1.5rem;
-
-
-
+    background-color: hsl(30, 38%, 92%);
 }
 
-ul {
-    list-style-type: none;
+main {
+    width: 100%;
 }
 
-.container article:last-child {
+.card {
+    min-width: 600px;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
     background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 0 0 0.5rem 0.5rem;
-    margin-top: 0;
-}
-
-.container article:first-child {
-
-
-    border-radius: 0.6rem 0.6rem 0 0;
+    border-radius: 10px;
 
 }
 
-.container {
-    max-width: 600px;
+.left {
+    width: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* padding: up-down left-right; */
+    padding: 35px 40px;
+    row-gap: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 
-.price {
+}
+
+.perfume {
+    font-size: 16px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 38px;
+    color: hsl(212, 21%, 14%);
+}
+
+.description {
+    width: 85%;
+    line-height: 1.2;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+}
+
+.prices {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.newprice {
+    font-size: 38px;
     color: hsl(158, 36%, 37%);
 }
 
-h2 {
-    font-size: 1rem;
-    font-weight: 500;
+.oldprice {
+    text-decoration: line-through;
+    font-size: 16px;
     color: hsl(228, 12%, 48%);
-    margin-bottom: 1rem;
 }
 
-h1,
-.price {
-    font-family: "Fraunces", "sans-serif";
-}
-
-.container h1 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-
-.container p {
-    margin-bottom: 2rem;
-}
-
-p {
-    color: hsl(228, 12%, 48%);
-    line-height: 1.8;
-}
-
-ul {
+button {
+    width: 100%;
+    padding: 17px 0;
+    margin: 0 auto;
     display: flex;
-    margin-bottom: 2rem;
-    /* align items to center     */
+    justify-content: center;
     align-items: center;
-}
-
-.container ul li:first-child {
-    font-size: 2rem;
-    margin-right: 1.5rem;
-
-}
-
-.container .btn {
-    background-color: hsl(158, 36%, 37%);
     color: #fff;
     font-weight: 700;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    width: 100%;
+    border-radius: 7px;
+    background-color: hsl(158, 36%, 37%);
     border: none;
-    border-radius: 0.6rem;
-    outline: none;
     cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 
 }
 
-.container .btn:hover {
-    background-color: hsl(158, 54%, 21%);
+button:hover {
+    background-color: hsl(157, 40%, 23%);
 }
 
-.container .btn img {
-    margin: 0.5rem;
+button img {
+    margin-right: 7px;
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-@media (min-width:640px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width:641px) and (max-width:768px) {
+    .card {
+        max-width: 600px;
     }
 }
 
-.container article:first-child img {
-    height: 100%;
-    border-radius: 0.5rem 0 0 0;
-}
+@media only screen and (max-width:640px) {
+    .card {
+        max-width: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
 
-.container article:last-child {
-    border-radius: 0 0.5rem 0 0;
-}
+    .left {
+        width: 100%;
+        height: 350px;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
 
-.container P {
-    margin-bottom: 1rem;
 
-}
+    }
 
-.container ul {
-    margin-bottom: 2rem;
+    .right {
+        width: 100%;
+        row-gap: 12px;
+        padding: 25px;
+        border-radius: 0 0 10px 10px;
+
+    }
+
+    h1 {
+        /* font-size: 32px; */
+        line-height: 1;
+    }
+
+    .description {
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        line-height: 1.7;
+        font-size: 12px;
+    }
 }
